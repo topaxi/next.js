@@ -33,6 +33,16 @@ declare module 'react' {
     amp?: string
   }
 
+  // <img fetchPriority=""> support
+  interface ImgHTMLAttributes<T> extends HTMLAttributes<T> {
+    fetchPriority?: 'high' | 'low' | 'auto'
+  }
+
+  // <link fetchPriority=""> support
+  interface LinkHTMLAttributes<T> extends HTMLAttributes<T> {
+    fetchPriority?: 'high' | 'low' | 'auto'
+  }
+
   // <link nonce=""> support
   interface LinkHTMLAttributes<T> extends HTMLAttributes<T> {
     nonce?: string

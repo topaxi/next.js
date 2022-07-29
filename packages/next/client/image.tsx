@@ -837,6 +837,7 @@ export default function Image({
             }
             rel="preload"
             as="image"
+            fetchPriority="high"
             href={imgAttributes.srcSet ? undefined : imgAttributes.src}
             {...linkProps}
           />

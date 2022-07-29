@@ -235,7 +235,9 @@ function lazyLoadingTests() {
 }
 
 async function hasPreloadLinkMatchingUrl(url) {
-  const links = await browser.elementsByCss('link[rel=preload][as=image]')
+  const links = await browser.elementsByCss(
+    'link[rel=preload][as=image][fetchpriority=high]'
+  )
   for (const link of links) {
     const imagesrcset = await link.getAttribute('imagesrcset')
     const href = await link.getAttribute('href')
